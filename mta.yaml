@@ -18,6 +18,11 @@ modules:
       properties:
          url: ${default-url}
 
+
+ - name: b
+   type: html5
+   path: b
+
 resources:
  - name: hdi_df
    properties:
