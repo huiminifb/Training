@@ -1,0 +1,25 @@
+ID: Training
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: df
+   type: hdb
+   path: df
+   requires:
+    - name: hdi_df
+
+
+ - name: ert
+   type: nodejs
+   path: ert
+   provides:
+    - name: ert_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: hdi_df
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
